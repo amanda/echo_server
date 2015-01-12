@@ -1,7 +1,6 @@
 import socket, random
 
-#PORT = random.randint(6000, 9000)
-PORT = 8888
+PORT = random.randint(6000, 9000)
 MSGLEN = 1024
 MAX_LISTEN = 5
 
@@ -16,8 +15,6 @@ if __name__ == '__main__':
 	(client, address) = server.accept()
 
 	while True:
-		
-		#while True:
 		data = client.recv(MSGLEN)
 		print type(data)
 		print 'data: {0!r}'.format(data)
