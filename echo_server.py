@@ -16,14 +16,13 @@ if __name__ == '__main__':
 
 	while True:
 		data = client.recv(MSGLEN)
-		print type(data)
-		print 'data: {0!r}'.format(data)
-		print "len: {}".format(len(data))
 		if data.strip().lower() == 'logout':
-			client.send('logged out')
-			print 'logged out'
+			client.send('logged out\n')
+			print 'logged out\n'
 			client.close()
 			break
+		elif data.strip().lower() == 'hi':
+			client.send('why hello there!\n')
 		elif data:
 			print 'received %s' % data
 			client.send(data)
