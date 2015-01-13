@@ -1,5 +1,4 @@
-import socket, random
-import re
+import socket, random, re
 
 PORT = random.randint(6000, 9000)
 MSGLEN = 1024
@@ -16,7 +15,7 @@ MEAN_STUFF = ['suck',
 				'mean'
 				]
 
-mean_regex = re.compile('|\b'.join(MEAN_STUFF), re.IGNORECASE)
+mean_regex = re.compile(r'\b(?:%s)\b' % '|'.join(MEAN_STUFF), re.IGNORECASE)
 
 if __name__ == '__main__':
 	server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
