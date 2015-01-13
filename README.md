@@ -1,3 +1,7 @@
 # echo_server
 
-learning about sockets and servers!
+a simple echo server that doesn't take your crap. made to learn about sockets and networking.
+
+## usage:
+
+python echo_server.py
